@@ -1,0 +1,41 @@
+﻿@model List<UserViewModel>
+<div class="row">
+    <div class="col-3">
+        <div class="row">
+            <a href="/admin/orders">Заказы</a>
+        </div>
+        <div class="row">
+            Пользователи
+        </div>
+        <div class="row">
+            <a href="/admin/roles">Роли</a>
+        </div>
+        <div class="row">
+            <a href="/admin/products">Продукты</a>
+        </div>
+    </div>
+    <div class="col-9">
+        <h3>Список пользователей</h3>
+    </div>
+</div>
+<br></br>
+<div class="row">
+	<div class="row">
+		<table class="table">
+			<thread>
+				<tr>
+					<th>Логин</th>
+				</tr>
+			</thread>
+			<tbody>
+				@for (int i = 0; i < Model.Count; i++)
+				{
+					<tr>
+						<td>@Model[i].UserName</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+</div>
+

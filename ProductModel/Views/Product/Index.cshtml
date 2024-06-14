@@ -1,0 +1,28 @@
+﻿@model List<Product>
+@{
+    ViewData["Title"] = "Каталог товаров"; 
+}
+
+<div class="text-center">
+    <h1 class="display-4"> @ViewData["Title"] </h1>
+    <div class="row">
+    @{
+
+        foreach (var product in Model)
+        {
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="@product.URLImage" class="card-img-top" alt="@product.Name">
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Name</h5>
+                        <p class="card-text">@product.Description</p>
+                        <h6 class="card-title">@product.Cost руб.</h6>
+                        <a href="/Product/Details/@product.Id" class="btn btn-primary">Подробнее</a>
+                            <a href="/cart/add?idProduct=@product.Id" class="btn btn-primary">В корзину</a>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    </div>
+</div>

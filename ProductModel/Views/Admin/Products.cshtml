@@ -1,0 +1,38 @@
+﻿@model List<Product> 
+<div class="row">
+    <div class="col-3">
+        <div class="row">
+            <a href="/admin/orders">Заказы</a>
+        </div>
+        <div class="row">
+            <a href="/admin/users">Пользователи</a>
+        </div>
+        <div class="row">
+            <a href="/admin/roles">Роли</a>
+        </div>
+        <div class="row">
+            Продукты
+        </div>
+    </div>
+    <div class="col-9">
+        <h3>Список товаров</h3>
+
+        <div class="text-center">
+            <div class="row">
+                <table class="table">
+                @{
+                    foreach (var product in Model)
+                    {
+                        <tr>
+                                <td>@product.Name</td>
+                                <td>@product.Description</td>
+                                <td>@product.Cost руб.</td>
+                        </tr>
+                    }
+                }
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>

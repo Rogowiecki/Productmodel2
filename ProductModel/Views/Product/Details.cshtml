@@ -1,0 +1,23 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Подробнее о товаре"; 
+}
+
+<div class="text-center">
+    <h1 class="display-4"> @ViewData["Title"] </h1>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+        <div class="card" style="width: 18rem;">
+            <img src="@Model.URLImage" class="card-img-top" alt="@Model.Name">
+            <div class="card-body">
+                <h5 class="card-title">@Model.Name</h5>
+                <p class="card-text">@Model.Description</p>
+                <h6 class="card-title">@Model.Cost руб.</h6>
+                <a href="/product/index" class="btn btn-primary">Назад</a>
+                    <a href="/cart/add?idProduct=@Model.Id" class="btn btn-primary">В корзину</a>
+            </div>
+        </div>
+        </div>
+</div>
+</div>

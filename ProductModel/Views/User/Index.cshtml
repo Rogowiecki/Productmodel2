@@ -1,0 +1,22 @@
+﻿@model OnLineShop.DB.Models.User
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Личный кабинет</title>
+</head>
+<body>
+    <div>
+        <h1>Личный кабинет</h1>
+        @if (Model != null)
+        {
+            <p>Ваш логин: @Model.UserName</p>
+        }
+        else
+        {
+            <p>Нет пользователей.</p>
+        }
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿@model Login
+<form method="post">
+<div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+        <div class="row">
+            <h3>Вход</h3>
+        </div>
+        <div class="row">
+            <label asp-for="UserName">Пользователь</label>
+            <input type="text" placeholder="Логин" asp-for="UserName" />
+            <span asp-validation-for="UserName" />
+        </div>
+        <div class="row">
+            <label asp-for="Password">Пароль</label>
+            <input type="password" placeholder="Пароль" asp-for="Password" />
+            <span asp-validation-for="Password" />
+        </div>
+        <div class="row">
+            <input type="checkbox" class="form-check-input" id="rememberme" name="rememberMe" value="true"/>
+            <label for="rememberme">Запомнить меня?</label>
+        </div>
+        <div class="row">
+            <button type="submit" asp-controller="Login" asp-action="Login">Войти</button>
+        </div>
+        <div class="row">
+            <a href="/login/regform">Регистрация нового пользователя</a>
+        </div>
+    </div>
+</div>
+</form>
